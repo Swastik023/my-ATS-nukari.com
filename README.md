@@ -145,6 +145,9 @@ CMD ["python", "app.py"]
 3. **Access the Application**:
     - The Flask API will be running on `http://localhost:5000`.
     - The React frontend is served statically by Flask and is accessible at the same URL.
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      
 ### 1. Clone the Repository
 
 ```bash
