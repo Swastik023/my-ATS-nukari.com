@@ -41,9 +41,7 @@ chromedriver.exe
 # Migration files
 migrations/
 
-# Docker
-docker-compose.yml
-Dockerfile
+
 
 # Node.js/React related
 node_modules/
