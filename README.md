@@ -17,7 +17,7 @@ This project is a comprehensive Applicant Tracking System (ATS) designed to stre
 
 ## Project Structure
 
-```plaintext
+
 ATS_Project/
 │
 ├── app.py                 # Entry point for the Flask application
@@ -171,6 +171,4 @@ For any questions or feedback, feel free to contact me:
 
 **Swastik**
 
-- **Email**: [swastik@example.com](mailto:swastik@example.com)
-- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/swastik)
-- **GitHub**: [GitHub Profile](https://github.com/swastik)
+- **Email**: [swastikwork007@example.com](mailto:swastikwork007@example.com)
