@@ -1,4 +1,6 @@
+### **Updated [README.md](http://readme.md/)**
 
+```markdown
 # Applicant Tracking System (ATS)
 
 ## Overview
@@ -15,7 +17,7 @@ This project is a comprehensive Applicant Tracking System (ATS) designed to stre
 
 ## Project Structure
 
-\`\`\`plaintext
+```plaintext
 ATS_Project/
 │
 ├── app.py                 # Entry point for the Flask application
@@ -49,9 +51,19 @@ ATS_Project/
             ├── CandidateProfile.js # Candidate profile display component
             ├── CandidateList.js    # List of candidates component
         └── App.css                 # Main CSS for App component
-\`\`\`
 
-## Prerequisites
+```
+
+### **Detailed Explanation of the `components/` Directory**
+
+- **`Navbar.js`**: A navigation bar that allows users to navigate between different sections of the ATS, such as job postings, resume search, and candidate management.
+- **`JobForm.js`**: A form component where users can input details for a new job posting and submit it to be stored locally and posted on [Naukri.com](http://naukri.com/).
+- **`JobList.js`**: Displays a list of all job postings, fetched from the backend, allowing users to view and manage them.
+- **`ResumeSearch.js`**: A form component that allows users to input search criteria and fetch matching resumes from [Naukri.com](http://naukri.com/).
+- **`CandidateProfile.js`**: Displays detailed information about a candidate, including their skills, experience, and education.
+- **`CandidateList.js`**: Displays a list of candidates, typically showing search results or candidates for a specific job posting.
+
+### **Prerequisites**
 
 - **Python 3.8+**
 - **Node.js & npm** (for the React frontend)
@@ -59,75 +71,82 @@ ATS_Project/
 - **Apache Airflow** (optional, for ETL processes)
 - **Google Chrome and Chromedriver** (for Selenium scripts)
 
-## Setup
+### **Setup**
 
-#### 1. Clone the Repository
+### 1. Clone the Repository
 
-\`\`\`bash
-git clone https://github.com/your_username/ATS_Project.git
+```bash
+git clone <https://github.com/your_username/ATS_Project.git>
 cd ATS_Project
-\`\`\`
 
-#### 2. Create and Activate a Virtual Environment
+```
 
-\`\`\`bash
+### 2. Create and Activate a Virtual Environment
+
+```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-\`\`\`
+source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 
-#### 3. Install Backend Dependencies
+```
 
-\`\`\`bash
+### 3. Install Backend Dependencies
+
+```bash
 pip install -r requirements.txt
-\`\`\`
 
-#### 4. Set Up the Database
+```
 
-- Configure your database URI in \`config.py\`.
+### 4. Set Up the Database
+
+- Configure your database URI in `config.py`.
 - Run the following command to initialize the database:
 
-\`\`\`bash
+```bash
 python app.py
-\`\`\`
 
-#### 5. Install Frontend Dependencies
+```
 
-Navigate to the \`frontend/\` directory and install the necessary Node.js packages:
+### 5. Install Frontend Dependencies
 
-\`\`\`bash
+Navigate to the `frontend/` directory and install the necessary Node.js packages:
+
+```bash
 cd frontend
 npm install
-\`\`\`
 
-#### 6. Run the Development Servers
+```
+
+### 6. Run the Development Servers
 
 - **Backend (Flask)**:
 
-\`\`\`bash
+```bash
 python app.py
-\`\`\`
+
+```
 
 - **Frontend (React)**:
 
-\`\`\`bash
+```bash
 npm start
-\`\`\`
 
-## Usage
+```
 
-#### Job Posting
+### **Usage**
+
+### Job Posting
 
 1. Access the job posting form via the web interface.
 2. Fill out the form with job details and submit.
-3. The job will be posted locally and on Naukri.com.
+3. The job will be posted locally and on [Naukri.com](http://naukri.com/).
 
-#### Resume Search
+### Resume Search
 
 1. Navigate to the resume search page.
 2. Enter search criteria (e.g., skills, experience).
-3. View matching resumes retrieved from Naukri.com.
+3. View matching resumes retrieved from [Naukri.com](http://naukri.com/).
 
-#### Automation Scripts
+### Automation Scripts
 
 - **Selenium Script**: Automate job postings on external job portals.
 - **Web Scraper**: Extract job data from websites.
@@ -135,22 +154,23 @@ npm start
 
 ### ETL with Airflow
 
-1. Define and schedule ETL processes using \`airflow_dag.py\`.
+1. Define and schedule ETL processes using `airflow_dag.py`.
 2. Use Airflow’s web interface to monitor and manage tasks.
 
-## Contributing
+### **Contributing**
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss potential changes.
 
-## License
+### **License**
 
 This project is licensed under the MIT License.
 
-## Contact
+### **Contact**
 
 For any questions or feedback, feel free to contact me:
 
 **Swastik**
-- **Email**: swastik@example.com
+
+- **Email**: [swastik@example.com](mailto:swastik@example.com)
 - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/swastik)
 - **GitHub**: [GitHub Profile](https://github.com/swastik)
