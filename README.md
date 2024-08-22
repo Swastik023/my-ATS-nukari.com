@@ -72,7 +72,82 @@ ATS_Project/
 - **Google Chrome and Chromedriver** (for Selenium scripts)
 
 ### **Setup**
+## Using Docker
 
+You can also run the entire application using Docker, which will handle both the React frontend and Flask backend in a single containerized environment.
+
+### Dockerfile Explanation
+
+This project uses a multi-stage Docker build to handle both the React frontend and the Flask backend:
+
+```
+dockerfileCopy code
+# Stage 1: Build React Frontend
+FROM node:18-alpine AS build
+
+WORKDIR /app
+
+# Install dependencies
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm install
+
+# Copy and build the React application
+COPY frontend/ ./
+RUN npm run build
+
+# Stage 2: Setup Flask Backend
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Install backend dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the Flask application code
+COPY . .
+
+# Copy the built React frontend from the previous stage
+COPY --from=build /app/build /app/frontend/build
+
+# Expose port 5000 for Flask
+EXPOSE 5000
+
+# Command to run the Flask application
+CMD ["python", "app.py"]
+
+```
+
+### Building and Running the Docker Container
+
+1. **Build the Docker image**:
+    
+    In the root directory of the project, run:
+    
+    ```bash
+    bashCopy code
+    docker build -t ats_project .
+    
+    ```
+    
+2. **Run the Docker container**:
+    
+    Once the image is built, run the container:
+    
+    ```bash
+    bashCopy code
+    docker run -p 5000:5000 ats_project
+    
+    ```
+    
+    This command will map port 5000 of your local machine to port 5000 of the Docker container, allowing you to access the application via `http://localhost:5000`.
+    
+3. **Access the Application**:
+    - The Flask API will be running on `http://localhost:5000`.
+    - The React frontend is served statically by Flask and is accessible at the same URL.
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      
 ### 1. Clone the Repository
 
 ```bash
