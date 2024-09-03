@@ -246,4 +246,4 @@ For any questions or feedback, feel free to contact me:
 
 **Swastik**
 
-- **Email**: [swastikwork007@example.com](mailto:swastikwork007@example.com)
+- **Email**: [swastikwork007@example.com](mailto:swastikwork007@outlook.com)
