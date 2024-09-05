@@ -240,10 +240,3 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 
 This project is licensed under the MIT License.
 
-### **Contact**
-
-For any questions or feedback, feel free to contact me:-
-
-**Swastik**
-
-- **Email**: [swastikwork007@example.com](mailto:swastikwork007@outlook.com)
